@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equinox Club Location Analysis & Clustering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .header, .footer {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header h1, .footer h1 {
+            margin: 0;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .visualization {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Equinox Club Location Analysis & Clustering</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>This GitHub page showcases a comprehensive analysis of Equinox club locations in relation to demographic and income data sourced from the U.S. Census and ACS. The analysis includes data cleaning, exploratory data analysis (EDA), clustering, and strategic recommendations.</p>
+        </div>
+
+        <div class="section">
+            <h2>Data Cleaning & Preparation</h2>
+            <p>The dataset was meticulously cleaned and prepared to ensure the accuracy and reliability of the analysis. Key steps included handling missing values, imputing data, and standardizing variables.</p>
+            <p><a href="data_cleaning_and_preparation.py">Download the Data Cleaning Script</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Exploratory Data Analysis (EDA)</h2>
+            <p>Our EDA provided crucial insights into the distribution and relationships within the data. Below are some of the key visualizations generated during this process.</p>
+            <div class="visualization">
+                <img src="visualization_1.png" alt="Visualization 1">
+                <p><em>Visualization Description: Bar chart showing the distribution of household incomes across different regions.</em></p>
+            </div>
+            <p><a href="EDA.ipynb">View the EDA Notebook</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Clustering Analysis</h2>
+            <p>The K-Means clustering analysis revealed distinct groups within the data, which are crucial for strategic decision-making.</p>
+            <div class="visualization">
+                <img src="visualization_2.png" alt="Visualization 2">
+                <p><em>Visualization Description: Scatter plot showing clusters based on age and income variables. Each cluster is color-coded and represents a unique demographic segment.</em></p>
+            </div>
+            <p><a href="clustering_analysis.ipynb">View the Clustering Analysis Notebook</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Key Findings & Strategic Recommendations</h2>
+            <p>Based on the analysis, we have identified key insights and strategic recommendations for Equinox. These recommendations focus on optimizing marketing strategies and identifying potential new locations.</p>
+            <div class="visualization">
+                <img src="visualization_3.png" alt="Visualization 3">
+                <p><em>Visualization Description: Heatmap showing the correlation between various demographic and income variables
