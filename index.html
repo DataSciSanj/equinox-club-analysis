@@ -5,142 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equinox Market Demographic and Income Analysis</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            font-weight: 700;
-            color: #444;
-        }
-        p {
-            font-weight: 300;
-            color: #666;
-        }
-        h1 {
-            margin-top: 0;
-            font-size: 2.5em;
-        }
-        h2 {
-            margin-top: 1.5em;
-            font-size: 2em;
-        }
-        h3 {
-            margin-top: 1em;
-            font-size: 1.5em;
-        }
-        .section {
-            margin-bottom: 2em;
-        }
-        .highlight {
-            font-weight: 700;
-            color: #222;
-        }
-        .plot {
-            text-align: center;
-            margin: 20px 0;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Equinox Market Demographic and Income Analysis</h1>
     </header>
     <div class="container">
-        <div class="section">
+        <section class="section">
             <h2>Introduction</h2>
             <p>
-                Brief overview of the project objectives. Description of the dataset: demographics, income, and geographical details related to areas where Equinox clubs are located.
+                This project aims to explore the demographic, income, and housing characteristics of households in zip codes where Equinox clubs are located. By leveraging U.S. Census ACS data, we can better understand the socio-economic profiles of these areas, providing valuable insights for strategic planning and market positioning.
             </p>
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <h2>Initial Data Cleaning and Preparation</h2>
             <p>
-                Summary of the data cleaning steps taken: imputation of missing values, standardization, and normalization of data where necessary. Any challenges encountered during data cleaning.
+                The dataset underwent several preprocessing steps, including the imputation of missing values, data normalization, and standardization. These steps were essential to ensure the accuracy of subsequent analyses. Challenges included handling outliers and ensuring consistency across different data sources.
             </p>
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <h2>Exploratory Data Analysis (EDA)</h2>
             <h3>Histograms of Key Numerical Variables</h3>
             <p>
-                Analysis of the distributions for median ages (both male and female), household income, owned household income, and monthly housing costs.
+                We explored the distribution of key numerical variables such as median age, household income, and monthly housing costs. The analysis revealed that homeowners in these areas tend to belong to higher income brackets, while renters generally fall into lower income categories.
             </p>
-            <p>
-                <span class="highlight">Insights:</span> Median household income for owned homes shows a spread towards higher income ranges, indicating a higher economic bracket for homeowners in these areas. Renters' median household income is more clustered towards the lower end, suggesting a different economic demographic compared to homeowners.
+            <p class="insight">
+                <strong>Insight:</strong> Homeowners show a trend towards higher economic status, while renters are clustered at the lower end of the income scale.
             </p>
             <div class="plot">
                 <!-- Insert plot here -->
             </div>
             <h3>Geographical Analysis</h3>
             <p>
-                State-Level Income Analysis: Median household income, owned household income, and renter household income were analyzed across states.
-            </p>
-            <p>
-                <span class="highlight">Key Observations:</span> Certain states like IL and NY have higher median owned household incomes, suggesting these might be key markets for Equinox. Renter household income shows less variability across states but highlights the economic differences in renting vs. owning a home.
+                The state-level analysis showed significant variations in income levels across different regions. States like Illinois and New York stood out with higher median household incomes, particularly among homeowners, suggesting these are key markets for Equinox.
             </p>
             <div class="plot">
                 <!-- Insert plot here -->
             </div>
             <h3>Age and Income Relationship</h3>
             <p>
-                Correlation Analysis: Weak correlations were found between age (both male and female) and income variables, suggesting that age is not a strong predictor of income in these regions.
+                We investigated the relationship between age and income and found weak correlations, indicating that age is not a strong predictor of income within these zip codes.
             </p>
             <div class="plot">
                 <!-- Insert plot here -->
             </div>
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <h2>Potential Future Analyses</h2>
             <p>
-                Cluster Analysis: Can analyze the clusters in more detail by examining the distribution of other features such as household income, occupied household income, and owned household income across different clusters.
+                Future analyses could delve deeper into cluster analysis, examining the distribution of income and housing costs across different segments. We could also explore geographical trends at a more granular city or neighborhood level to uncover more localized patterns.
             </p>
-            <p>
-                We might also want to explore different pairs of features to see if other combinations reveal more distinct patterns between clusters. Exploring the clustering results in the context of geographical differences or age and income relationships might also yield interesting insights.
-            </p>
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <h2>Limitations</h2>
-            <p>
-                <span class="highlight">External Data Constraints:</span> The analysis was limited to publicly available data. Internal Equinox data on memberships, revenue, and specific marketing campaigns could provide deeper insights.
+            <p class="insight">
+                <strong>Data Constraints:</strong> The analysis was constrained by the availability of publicly accessible data. Incorporating internal Equinox data could significantly enhance the findings.
             </p>
-            <p>
-                <span class="highlight">Geographical Granularity:</span> While state-level analysis was insightful, more detailed city or neighborhood-level data would allow for more precise targeting and understanding of local markets.
+            <p class="insight">
+                <strong>Granularity:</strong> State-level analysis provided broad insights, but more detailed city or neighborhood-level data would offer more precise targeting capabilities.
             </p>
-            <p>
-                <span class="highlight">Time-Series Analysis:</span> A longitudinal analysis could reveal trends over time, but this was outside the scope due to data limitations.
+            <p class="insight">
+                <strong>Time-Series Analysis:</strong> A longitudinal study could reveal trends over time but was outside the scope due to data limitations.
             </p>
-        </div>
-        <div class="section">
+        </section>
+        <section class="section">
             <h2>Conclusion</h2>
             <p>
-                Summary of key findings and their implications for Equinox. Suggestions for strategic focus based on the data, such as targeting high-income homeowners or expanding in regions with growing rental populations. Final thoughts on the importance of integrating internal data for a more comprehensive understanding.
+                The findings suggest that Equinox clubs are primarily located in higher-income areas, with homeowners representing a significant portion of the target demographic. These insights can guide future marketing and expansion efforts. For a more comprehensive analysis, integrating internal data with external datasets will be crucial.
             </p>
-        </div>
+        </section>
     </div>
     <footer>
         <p>© 2024 Equinox Market Analysis</p>
