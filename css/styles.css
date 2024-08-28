@@ -27,7 +27,7 @@ header {
 
 /* Headings */
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 500;
     color: #444;
 }
 
@@ -39,7 +39,7 @@ p {
 
 /* Highlight Text */
 .highlight {
-    font-weight: 700;
+    font-weight: 500;
     color: #222;
 }
 
