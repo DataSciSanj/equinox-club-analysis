@@ -1,83 +1,50 @@
 <!DOCTYPE html>
-<html class="light" lang="en-us" >
-  <meta charset="UTF-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equinox Club Analysis</title>
-    <!-- Link to Google Fonts for Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: "Roboto", sans-serif;
-            font-style: normal;
-            line-height: 1.0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .header, .footer {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .header h1, .footer h1 {
-            margin: 0;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            color: #333;
-        }
-        .visualization {
-            text-align: center;
-            margin-top: 20px;
-        }
+        body { font-family: "Roboto", sans-serif; line-height: 1.6; margin: 20px; }
+        img { border: 1px solid #ddd; border-radius: 4px; padding: 5px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Equinox Club Analysis</h1>
-        <h2>Demographic, Geographic & Socioeconomic Characteristics</h2>
-    </div>
+    <h1>Equinox Club Analysis: Demographic and Financial Insights</h1>
+    <p>Welcome to the Equinox Club Analysis project, where we explore the distribution and characteristics of Equinox clubs across various locations, analyzing demographic and financial data to uncover patterns and insights.</p>
 
-    <div class="container">
-        <div class="section">
-            <h2>Introduction</h2>
-            <p>This GitHub page showcases a comprehensive analysis of Equinox club locations in relation to demographic and income data sourced from the U.S. Census and ACS. The analysis includes data cleaning, exploratory data analysis (EDA), clustering, and strategic recommendations.</p>
-        </div>
+    <h2>Data Overview</h2>
+    <h3>Datasets Used</h3>
+    <p>This analysis uses data scraped from the Equinox website, combined with demographic data sourced from the U.S. Census and ACS.</p>
 
-        <div class="section">
-            <h2>Data Cleaning & Preparation</h2>
-            <p>The dataset was meticulously cleaned and prepared to ensure the accuracy and reliability of the analysis. Key steps included handling missing values, imputing data, and standardizing variables.</p>
-            <p><a href="data_cleaning_and_preparation.py">Download the Data Cleaning Script</a></p>
-        </div>
+    <h3>Data Cleaning & Preprocessing</h3>
+    <p>The data was cleaned to remove duplicates, handle missing values, and standardize formats. Outliers in income data were treated to prevent skewing the analysis.</p>
 
-        <div class="section">
-            <h2>Exploratory Data Analysis (EDA)</h2>
-            <p>Our EDA provided crucial insights into the distribution and relationships within the data. Below are some of the key visualizations generated during this process.</p>
-            <div class="visualization">
-                <img src="visualization_1.png" alt="Visualization 1">
-                <p><em>Visualization Description: Bar chart showing the distribution of household incomes across different regions.</em></p>
-            </div>
-            <p><a href="EDA.ipynb">View the EDA Notebook</a></p>
-        </div>
+    <h2>Exploratory Data Analysis (EDA)</h2>
+    <h3>Visualizations</h3>
+    <img src="assets/visualization_1.png" alt="Visualization 1">
+    <figcaption>Figure 1: Histogram of Household Incomes.</figcaption>
 
-        <div class="section">
-            <h2>Clustering Analysis</h2>
-            <p>The K-Means clustering analysis revealed distinct groups within the data, which are crucial for strategic decision-making.</p>
-            <div class="visualization">
-                <img src="visualization_2.png" alt="Visualization 2">
-                <p><em>Visualization Description: Scatter plot showing clusters based on age and income variables. Each cluster is color-coded and represents a unique demographic segment.</em></p>
-            </div>
-            <p><a href="clustering_analysis.ipynb">View the Clustering Analysis Notebook</a></p>
-        </div>
+    <img src="assets/visualization_2.png" alt="Visualization 2">
+    <figcaption>Figure 2: Scatter Plot of Club Locations vs. Median Household Age.</figcaption>
 
-        <div class="section">
-            <h2>Key Findings & Strategic Recommendations</h2>
-            <p>Based on the analysis, we have identified key insights and strategic recommendations for Equinox. These recommendations focus on optimizing marketing strategies and identifying potential new locations.</p>
-            <div class="visualization">
-                <img src="visualization_3.png" alt="Visualization 3">
-                <p><em>Visualization Description: Heatmap showing the correlation between various demographic and income variables
+    <h2>Clustering Analysis</h2>
+    <h3>Approach</h3>
+    <p>K-Means clustering was applied to segment the clubs based on demographic and income variables. The optimal number of clusters was determined using the Elbow Method.</p>
+
+    <img src="assets/visualization_3.png" alt="Cluster Analysis">
+    <figcaption>Figure 3: K-Means Clustering Result.</figcaption>
+
+    <h3>Cluster Descriptions</h3>
+    <p>We identified multiple customer segments, each with distinct demographic characteristics.</p>
+
+    <h2>Key Findings & Insights</h2>
+    <h3>Income Distribution Analysis</h3>
+    <p>The analysis revealed that clubs are primarily located in high-income areas, suggesting a target demographic of affluent individuals. Additionally, clusters showed differences in median age and income, indicating diverse market segments.</p>
+
+    <h2>Conclusion</h2>
+    <p>This project provided valuable insights into the demographic and financial characteristics of Equinox club locations, offering strategic recommendations to better align with target markets. Future analyses could include customer satisfaction surveys and gym usage patterns to gain deeper insights into
