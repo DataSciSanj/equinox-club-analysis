@@ -1,100 +1,59 @@
-/* General Layout */
+/* Global Styles */
 body {
-    font-family: 'Lato Light', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
 }
 
-/* Header Section */
+/* Header */
 header {
-    background: #cfcecf;
+    background-color: #333;
+    color: white;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #333;
 }
 
-header h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-/* Updated Summary Section */
-#summary {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    background-color: #f7f7f7;
-    margin-bottom: 20px;
-}
-
-.summary-item {
-    text-align: center;
-    flex: 1;
-    margin: 0 10px;
-}
-
-.summary-item img {
-    max-width: 50px;
-    margin-bottom: 10px;
-}
-
-/* Updated Global View Section */
-#global-view {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #efefef;
-}
-
-#global-chart {
-    margin: 0 auto;
-    width: 80%;
-    height: 400px;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Data Analysis Section */
-#data-analysis {
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.chart {
-    margin-bottom: 30px;
+/* Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    color: #444;
+}
+
+/* Paragraphs */
+p {
+    font-weight: 300;
+    color: #666;
+}
+
+/* Highlight Text */
+.highlight {
+    font-weight: 700;
+    color: #222;
+}
+
+/* Plots Section */
+.plot {
     text-align: center;
+    margin: 20px 0;
 }
 
-.chart img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.chart p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Footer Section */
+/* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 3px solid #4CAF50;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
 }
