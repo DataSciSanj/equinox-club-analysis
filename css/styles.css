@@ -10,50 +10,78 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* Main Container */
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-weight: 500;
+/* Section Titles */
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
     color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 8px;
 }
 
 /* Paragraphs */
 p {
     font-weight: 300;
+    font-size: 1rem;
     color: #666;
+    margin-bottom: 15px;
 }
 
-/* Highlight Text */
-.highlight {
-    font-weight: 500;
-    color: #222;
+.insight {
+    font-weight: 400;
+    color: #007acc;
+    margin-top: 10px;
 }
 
 /* Plots Section */
 .plot {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 2px solid #007acc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
