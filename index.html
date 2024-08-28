@@ -3,55 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equinox Analysis Report</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Equinox Club Analysis Report</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #333;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Section Titles */
+        section h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* Paragraph Styles */
+        section p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        /* Image Styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+            border-top: 2px solid #eee;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Equinox Club Analysis</h1>
-        <h2>Insights from demographic and income data</h2>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Equinox Club Analysis Report</h1>
+            <p>Insights from Demographic and Income Data</p>
+        </header>
 
-    <section id="summary">
-        <div class="summary-item">
-            <img src="assets/icon1.png" alt="Insight 1 Icon">
-            <p>Key Insight 1</p>
-        </div>
-        <div class="summary-item">
-            <img src="assets/icon2.png" alt="Insight 2 Icon">
-            <p>Key Insight 2</p>
-        </div>
-        <div class="summary-item">
-            <img src="assets/icon3.png" alt="Insight 3 Icon">
-            <p>Key Insight 3</p>
-        </div>
-    </section>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This report presents an analysis of the Equinox Club data, focusing on demographic and income variables. The goal is to uncover insights that can help inform business strategy and decision-making.</p>
+        </section>
 
-    <section id="global-view">
-        <h2>Global View</h2>
-        <div id="global-chart">
-            <!-- Placeholder for a large, visually engaging chart -->
-        </div>
-    </section>
+        <section id="data-overview">
+            <h2>Data Overview</h2>
+            <p>The dataset used in this analysis was compiled from various sources, including Equinox club location data and U.S. Census data on median age and income distributions. The data has been cleaned and imputed to ensure completeness and accuracy for analysis.</p>
+        </section>
 
-    <section id="data-analysis">
-        <h2>Data Analysis</h2>
-        <div class="chart">
-            <img src="assets/numerical_histograms.png" alt="Numerical Data Histograms">
-            <p>Distribution of various numerical features in the dataset.</p>
-        </div>
-        <div class="chart">
-            <img src="assets/location_bar_chart.png" alt="Location Bar Chart">
-            <p>Frequency of Equinox club locations by city.</p>
-        </div>
-        <div class="chart">
-            <img src="assets/state_bar_chart.png" alt="State Bar Chart">
-            <p>Frequency of Equinox club locations by state.</p>
-        </div>
-    </section>
+        <section id="methodology">
+            <h2>Methodology</h2>
+            <p>The analysis employs exploratory data analysis (EDA), including histograms and bar charts, to understand the distribution of key variables. A K-Means clustering algorithm is then applied to segment the data into distinct groups based on demographic and income variables.</p>
+        </section>
 
-    <footer>
-        <p>© 2024 Equinox Analysis Report</p>
-    </footer>
+        <section id="findings">
+            <h2>Findings & Insights</h2>
+            <p>Based on the cluster analysis, six distinct groups were identified. These clusters reveal patterns in demographic and income characteristics, which can be leveraged for targeted marketing and strategic planning.</p>
+            <!-- Placeholder for visualizations -->
+            <img src="assets/cluster_analysis.png" alt="Cluster Analysis Visualization">
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The analysis highlights key demographic and income trends that are relevant to the business. Future work could involve refining the clusters further or exploring additional variables that may impact club membership and profitability.</p>
+        </section>
+
+        <footer>
+            <p>© 2024 Equinox Analysis Report</p>
+        </footer>
+    </div>
 </body>
 </html>
