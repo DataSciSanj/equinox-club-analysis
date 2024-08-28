@@ -5,55 +5,80 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
 }
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
 }
 
 /* Main Container */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-/* Headings */
-h1, h2, h3 {
+/* Section Titles */
+h2 {
     font-weight: 700;
-    color: #444;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 5px solid #007acc;
+    padding-left: 10px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 /* Paragraphs */
 p {
     font-weight: 300;
+    font-size: 1.1rem;
     color: #666;
+    margin-bottom: 15px;
 }
 
-/* Highlight Text */
-.highlight {
-    font-weight: 700;
-    color: #222;
+.insight {
+    font-weight: 400;
+    color: #007acc;
 }
 
 /* Plots Section */
 .plot {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 20px;
+    border-top: 3px solid #007acc;
+}
+
+footer p {
+    margin: 0;
 }
