@@ -35,7 +35,7 @@ header h1 {
 
 /* Section Titles */
 h2 {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Lato';
     font-weight: 600;
     font-size: 1rem;
     color: #666;
@@ -44,7 +44,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-h3 {
+h3 {e
     font-weight: 500;
     font-size: 1.2rem;
     color: #333;
@@ -53,7 +53,7 @@ h3 {
 
 /* Paragraphs */
 p {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika';
     font-weight: 500;
     font-size: 1rem;
     color: #444;
