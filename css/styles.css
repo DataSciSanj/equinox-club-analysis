@@ -1,68 +1,68 @@
 /* Global Styles */
 body {
-    font-family: 'Quicksand', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    font-family: ';
+    color: ;
+    line-height: ;
+    margin: ;
+    padding:0;
+    background-color: ;
 }
 
 /* Header */
 header {
-    background-color: #222;
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: ;
+    color:;
+    padding: px;
+    text-align: ;
+    box-shadow:;
 }
 
 header h1 {
-    font-size: 1.6rem;
-    margin: 0;
-    letter-spacing: 1px;
+    font-size: rem;
+    margin: ;
+    letter-spacing: px;
 }
 
 /* Main Container */
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    max-width: px;
+    margin: px auto;
+    padding: px;
+    background-color: ;
+    box-shadow:;
+    border-radius: px;
 }
 
 /* Section Titles */
 h2 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #999;
-    padding-bottom: 5px;
+    font-family: ;
+    font-weight:;
+    font-size: rem;
+    color: ;
+    margin-bottom: px;
+    border-bottom: px solid ;
+    padding-bottom: px;
 }
 
-h3 {e
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 8px;
+h3 {
+    font-weight:;
+    font-size: rem;
+    color: 3;
+    margin-bottom: px;
 }
 
 /* Paragraphs */
 p {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 15px;
+    font-weight: ;
+    font-size: rem;
+    color: ;
+    margin-bottom: px;
 }
 
 .insight {
-    font-weight: 400;
-    color: #007acc;
-    margin-top: 10px;
+    font-weight: ;
+    color: c;
+    margin-top: px;
 }
 
 /* Plots Section */
@@ -73,15 +73,15 @@ p {
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    border-top: 2px solid #007acc;
+    background-color:;
+    color: ;
+    text-align: ;
+    padding: px;
+    margin-top: px;
+    border-top: px solid;
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.9rem;
+    margin: ;
+    font-size:rem;
 }
