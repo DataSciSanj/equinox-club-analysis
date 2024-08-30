@@ -48,8 +48,8 @@
             <p>To determine if the median income at Equinox locations is significantly different from the national median income, we conducted a Mann-Whitney U test. This non-parametric test was chosen due to the lack of variance in the national income data, which made a t-test unreliable.</p>
             <p><strong>Mann-Whitney U Test Results:</strong></p>
             <ul>
-                <li><code>U-Statistic:</code> 99.0</li>
-                <li><strong>P-Value:</strong> 0.1547</li>
+                <li><code>U-Statistic: 99.0</li></code>
+                <li><code>P-Value:</code> 0.1547</li>
             </ul>
             <p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income. This suggests that while Equinox locations are in wealthier areas, the difference is not statistically significant at the 5% level.</p>
         </section>
