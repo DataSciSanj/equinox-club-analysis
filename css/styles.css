@@ -42,7 +42,7 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 0.67em;
 }
 
 .plot {
@@ -69,7 +69,7 @@ code {
 }
 
 strong {
-    color: #FF7043;
+    color: #0095A8;
 }
 
 h4 {
