@@ -48,8 +48,8 @@
             <p>To determine if the median income at Equinox locations is significantly different from the national median income, we conducted a Mann-Whitney U test. This non-parametric test was chosen due to the lack of variance in the national income data, which made a t-test unreliable.</p>
             <p><strong>Mann-Whitney U Test Results:</strong></p>
             <ul>
-                <li><code>U-Statistic: 99.0</li></code>
-                <li><code>P-Value:</code> 0.1547</li></code>
+                <li><code>U-Statistic: 99.0</code></li>
+                <li><code>P-Value:</code> 0.1547</code></li>
             </ul>
             <p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income. This suggests that while Equinox locations are in wealthier areas, the difference is not statistically significant at the 5% level.</p>
         </section>
@@ -66,8 +66,8 @@
             <h4>Hypothesis Testing Results</h4>
             <p>We conducted Mann-Whitney U tests to assess the significance of the income differences:</p>
             <ul>
-                <li><code><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li></code>
-                <li><code><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: \(6.60 \times 10^{-8}\)</li></code>
+                <li><code><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: 1.28 * 10^-6</code></li>
+                <li><code><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: 6.60 * 10^-8</code></li>
             </ul>
             <p>Both tests confirm that the income differences between Equinox locations and state averages are statistically significant for both males and females.</p>
         </section>
