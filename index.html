@@ -11,311 +11,162 @@
         <h1>EQUINOX Market Analysis</h1>
     </header>
     <div class="container">
-        <section class="section">
-            <h2>Introduction & Objective:</h2>
+        <section class="introduction">
+            <h2>Introduction & Objective</h2>
             <p>
-                We analyze demographic, economic and housing characteristics of current Equinox club locations to identify patterns that could inform future site selection. Despite not having access to internal usage data, the goal is to demonstrate how external data might provide insights into potential new locations.
+                We analyze demographic, economic, and housing characteristics of current Equinox club locations to identify patterns that could inform future site selection. Despite not having access to internal usage data, the goal is to demonstrate how external data might provide insights into potential new locations.
             </p>
-<h2>Data Description and Collection</h2>
+        </section>
 
-<h3>Equinox Data</h3>
-<p>
-Equinox fitness, part of the Equinox Group, is a subsidiary of privately-held real estate firm The Related Companies. Internal data such as same-store revenues, membership, retention, etc. are not publicly available. The limitations presented by the lack of such data to a more thorough analysis are discussed below. 
+        <section class="data-collection">
+            <h2>Data Description and Collection</h2>
+            <h3>Equinox Data</h3>
+            <p>
+                Equinox fitness, part of the Equinox Group, is a subsidiary of privately-held real estate firm The Related Companies. Internal data such as same-store revenues, membership, retention, etc., are not publicly available. The limitations presented by the lack of such data to a more thorough analysis are discussed below.
+            </p>
+            <p>
+                The scope of Equinox-related data used in this analysis is restricted to location information available on their website. This provided the names, addresses, phone numbers, and amenities for each club. Of particular note for analytical purposes, was the inclusion of ZIP codes, which were used to join club records to external data.
+            </p>
+            <p>
+                Equinox club location data was collected with a web scraping script built using the BeautifulSoup library in Python, resulting in an initial Equinox location dataset of 114 clubs.
+            </p>
+        </section>
 
-The scope of Equinox-related data used in this analysis is restricted to location information available on their website [www.equinox.com/clubs]. This provided the names, addresses, phone numbers, and amenities for each club. Of particular note for analytical purposes, was the inclusion of ZIP codes, which were used to join club records to external data.
+        <section class="data-summary">
+            <h2>Equinox Club Locations - Summary and Focus</h2>
+            <p>
+                After collecting the data on Equinox club locations, we found the following key statistics:
+            </p>
+            <ul>
+                <li><strong>Total Number of Clubs:</strong> 114</li>
+                <li><strong>Number of Clubs in the UK:</strong> 3</li>
+                <li><strong>Number of Clubs in Canada:</strong> 3</li>
+                <li><strong>Number of Clubs in the US:</strong> 108</li>
+                <li><strong>Number of Location Regions in the US:</strong> 13</li>
+                <li><strong>Number of States Represented:</strong> 14</li>
+                <li><strong>Number of Cities Represented:</strong> 56</li>
+                <li><strong>Number of Zip Codes Represented:</strong> 94</li>
+            </ul>
+            <p>
+                For our analysis, we focus exclusively on the clubs in the United States, where there are 108 clubs across 14 states, 56 cities, and 94 zip codes. These clubs will be examined as model profiles to glean insights into the demographic, economic, and household data of the areas they are located in.
+            </p>
+            <div class="plot">
+                <img src="path_to_image/summary_bar_chart.png" alt="Equinox Clubs and Represented Areas Summary">
+            </div>
+        </section>
 
-Equinox club location data was collected with a web scraping script built using the BeautifulSoup library in Python. 
-This resulted in an initial Equinox location dataset of 114 clubs.
-</p>
+        <section class="external-data">
+            <h2>External Data/Market Data/Demo, Econ, Housing/Socio-Economic Data</h2>
+            <p>
+                Data pertaining to the demographic, economic, income, and housing characteristics of locations where Equinox clubs are located were sourced from the U.S. Census. This analysis focuses on the most recent year's (2022) demographic, income, and housing data estimates.
+            </p>
+            <p>
+                The following datasets were primarily leveraged in the analysis presented here:
+            </p>
+            <ul>
+                <li>American Community Survey 2022: 5-Year Estimates S0101 | Age and Sex</li>
+                <li>American Community Survey 2022: 5-Year Estimates S1903 | Median Income in the Past 12 Months</li>
+                <li>American Community Survey 2022: 5-Year Estimates S2503 | Financial Characteristics</li>
+            </ul>
+            <p>
+                These files were downloaded directly from the Census Bureau's data website after being filtered to ensure the output files provided ZIP code level data.
+            </p>
+        </section>
 
-<section class="section">
-    <h2>Equinox Club Locations</h2>
-    <p>
-        <strong>Objective:</strong><br>
-        The first step in our analysis involved gathering the locations of Equinox clubs across the United States. This dataset serves as the foundation for analyzing the demographic, income, and housing characteristics of areas surrounding these clubs.
-    </p>
-    <p>
-        <strong>Data Collection Process:</strong><br>
-        We obtained the list of Equinox clubs through web scraping, extracting relevant details such as the club names and addresses. This dataset, saved as <code>eqnx_all_clubs.csv</code>, includes key information such as Location, Club Name, Address, City, State, Zip Code, Phone, and Amenities. This information will later be used to link the club locations with demographic data from the U.S. Census. The web scraping process is detailed in the corresponding Jupyter notebook, which includes the necessary steps and code to replicate the data extraction process.
-    </p>
-   
-<section class="section">
-<section class="section">
-    <h2>Equinox Club Locations - Summary and Focus</h2>
-    <p>
-        After collecting the data on Equinox club locations, we found the following key statistics:
-    </p>
-    <ul>
-        <li><strong>Total Number of Clubs:</strong> 114</li>
-        <li><strong>Number of Clubs in the UK:</strong> 3</li>
-        <li><strong>Number of Clubs in Canada:</strong> 3</li>
-        <li><strong>Number of Clubs in the US:</strong> 108</li>
-        <li><strong>Number of Location Regions in the US:</strong> 13</li>
-        <li><strong>Number of States Represented:</strong> 14</li>
-        <li><strong>Number of Cities Represented:</strong> 56</li>
-        <li><strong>Number of Zip Codes Represented:</strong> 94</li>
-    </ul>
-    <p>
-        For our analysis, we focus exclusively on the clubs in the United States, where there are 108 clubs across 14 states, 56 cities, and 94 zip codes. These clubs will be examined as model profiles to glean insights into the demographic, economic, and household data of the areas they are located in.
-    </p>
-    <div class="plot">
-        <!-- Visualization: Equinox Clubs and Represented Areas Summary -->
-        <img src="path_to_image/summary_bar_chart.png" alt="Equinox Clubs and Represented Areas Summary">
+        <section class="data-preparation">
+            <h2>Data Cleaning and Preparation</h2>
+            <p>
+                For this analysis, the initial data cleaning steps involved handling missing values in the <code>eqnx_with_census_data.csv</code> file. We began by filtering out non-US records and addressing missing values in numeric columns using a median imputation strategy.
+            </p>
+            <p>
+                After these steps, the dataset was cleaned and ready for further analysis, with non-numeric NaNs preserved for potential categorical analysis.
+            </p>
+        </section>
+
+        <section class="eda">
+            <h2>Exploratory Data Analysis</h2>
+            <p>We began our analysis by examining the distribution of key demographic variables at Equinox locations and comparing them to state and national averages.</p>
+
+            <h3>1. Median Income of Families by State (Equinox Locations)</h3>
+            <img src="boxplot_median_income.png" alt="Median Income of Families by State (Equinox Locations)">
+
+            <h3>2. Distribution of Median Age at Equinox Locations</h3>
+            <img src="histogram_median_age.png" alt="Distribution of Median Age at Equinox Locations">
+
+            <h3>3. Income Distribution: Equinox Locations vs National Average</h3>
+            <img src="histogram_income_comparison.png" alt="Income Distribution: Equinox Locations vs National Average">
+        </section>
+
+        <section class="correlation-analysis">
+            <h3>Correlation Analysis: Key Factors</h3>
+            <p>
+                We performed a correlation analysis to identify the strongest relationships between demographic and economic factors at Equinox locations. The following insights were derived:
+            </p>
+            <ul>
+                <li><strong>Household Costs and Family Income:</strong> Strong correlations were observed between household costs and family income, indicating that Equinox locations are typically found in wealthier areas.</li>
+                <li><strong>Population and Family Size:</strong> The population count is strongly correlated with the number of families and individuals, suggesting that Equinox locations are in denser, family-oriented areas.</li>
+                <li><strong>Household Occupancy and Income:</strong> Higher household occupancy rates are associated with higher incomes, further supporting the idea that Equinox locations are in affluent neighborhoods.</li>
+            </ul>
+        </section>
+
+        <section class="hypothesis-testing">
+            <h3>Hypothesis Testing: Median Income</h3>
+            <p>
+                To determine if the median income at Equinox locations is significantly different from the national median income, we conducted a Mann-Whitney U test. This non-parametric test was chosen due to the lack of variance in the national income data, which made a t-test unreliable.
+            </p>
+            <p><strong>Mann-Whitney U Test Results:</strong></p>
+            <ul>
+                <li><strong>U-Statistic:</strong> 99.0</li>
+                <li><strong>P-Value:</strong> 0.1547</li>
+            </ul>
+            <p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income.</p>
+        </section>
+
+        <section class="gender-analysis">
+            <h3>Gender-Based Income Analysis</h3>
+            <p>We explored the income differences between males and females at Equinox locations compared to the state averages.</p>
+
+            <h4>1. Male Median Income: Equinox Locations vs. State Averages</h4>
+            <img src="boxplot_male_income.png" alt="Male Median Income: Equinox Locations vs. State Averages">
+
+            <h4>2. Female Median Income: Equinox Locations vs. State Averages</h4>
+            <img src="boxplot_female_income.png" alt="Female Median Income: Equinox Locations vs. State Averages">
+
+            <h4>Key Insights</h4>
+            <ul>
+                <li><strong>Statistically Significant Differences:</strong> Both males and females at Equinox locations have significantly higher median incomes compared to the state averages, as shown by the Mann-Whitney U test results.</li>
+                <li>The income levels at Equinox locations underscore the club's presence in affluent areas, with both genders earning more compared to state averages.</li>
+            </ul>
+
+            <h4>Hypothesis Testing Results</h4>
+            <p>We conducted Mann-Whitney U tests to assess the significance of the income differences:</p>
+            <ul>
+                <li><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li>
+                <li><strong>Female Income:</strong> U-Statistic
+                <li><strong>Female Income:</strong> U-Statistic: \(6.60 \times 10^{-8}\)</li>
+            </ul>
+            <p>Both tests confirm that the income differences between Equinox locations and state averages are statistically significant for both males and females.</p>
+        </section>
+
+        <section class="conclusion">
+            <h2>Conclusion & Future Directions</h2>
+            <h4>1. Income and Demographic Insights</h4>
+            <ul>
+                <li>Equinox locations are predominantly situated in affluent areas, with median incomes significantly higher than both state and national averages.</li>
+                <li>Both male and female income levels at Equinox locations are higher than state averages, and this difference is statistically significant.</li>
+                <li>The analysis also revealed correlations between household costs, family income, and population density, further highlighting the wealth and density of areas where Equinox thrives.</li>
+            </ul>
+
+            <h4>2. Gender-Based Differences</h4>
+            <ul>
+                <li>Both males and females at Equinox locations tend to have higher incomes compared to their counterparts at the state level.</li>
+                <li>The significant differences in median income between Equinox locations and state averages for both genders underscore the club’s presence in wealthier areas.</li>
+            </ul>
+
+            <h4>Future Directions</h4>
+            <p>While this analysis lays a strong foundation for understanding the characteristics of successful Equinox locations, further analysis could focus on predictive modeling to identify potential new locations. Future work could also explore additional factors such as education levels, commuting patterns, and other socioeconomic indicators that might influence the success of a new club location.</p>
+            <p>Overall, this project demonstrates a methodical approach to data analysis, with meaningful insights that can inform strategic business decisions. It showcases the ability to conduct thorough exploratory data analysis, perform hypothesis testing, and effectively communicate findings, making it a valuable contribution to the decision-making process.</p>
+        </section>
     </div>
-</section>
-
-<section class="section">
-    <p>
-        <strong>Next Steps:</strong><br>
-        With the Equinox club locations data in hand, we will proceed to merge this data with census information to analyze the socio-economic profiles of the regions where these clubs are located.
-    </p>
-</section>
-
-<h2>External Data/Market Data/Demo,Econ,Housing/Socio-Economic Data</h2>
-<p>
-Data pertaining to the demographic, economic, income and housing characteristics of locations where Equinox clubs are located were sourced from the U.S. Census [data.census.gov]. The Census Bureau offers data spanning a wide range of topics including Business and Economic Data, Education, Employment, Housing, Race, etc. This analysis focuses on the most recent year's (2022) demographic, income and housing data estimates. Potential further analyses that might leverage other available datasets are discussed below.
-
-Though many datasets were explored and investigated prior to defining the scope of this analysis, the following datasets were primarily leveraged in the analysis presented here.
-</p>
- <ul>
-    <li>American Community Survey 2022: 5-Year Estimates S0101 | Age and Sex</li>
-    <li>Filename: ACSS5TY2022.S0101-Data.csv</li>
-</ul>
-<ul>
-    <li>American Community Survey 2022: 5-Year Estimates S1903 | Median Income in the Past 12 Months</li>
-    <li>Filename: ACSS5TY2022.S1903-Data.csv</li>
-</ul>
-<ul>/
-    <li>American Community Survey 2022: 5-Year Estimates S2503 | Financial Characteristics</li>
-    <li>Filename: ACSS5TY2022.S2503-Data.csv
-</ul>
-<p>
-These files were downloaded directly from the Census Bureau's data website after being filtered ensure the output files provided ZIP code level data.
-<<link to the csv output in assets>>
-</p>
-
-<h3>Initial Data Review, Selection and Cleaning</h3>
-<p>
-Data cleaning and preparation was focused on the ACS data downloaded from the Census Bureau's website.
-
-Each dataset was first reviewed to determine suitability and relevance to our use case. After determining the datasets were relevant, specific columns were then selected from each data set to support further analysis. Descriptive short names for the columns were created at this point.
-
-[link to files or tables showing which columns were selected, ||file|column|my_name||]
-
-After reviewing and selecting the data, the different data sets were joined by appending data from the three ACS files to the Equinox club location data. The aim was to create an enhanced Equinox club file with our selected ACS data as features of Equinox clubs (using ZIP code as a heuristic for each club).
-
-[link to enhanced club data file including NaNs]
-
-The final preprocessing step was to review the dataset, decide which if any records to drop, impute missing values, and data normalization and standardization. 
-</p>
-<ul>    
-    <li>link to ipynb script to normalize this data set</li>
-    <li>either leave the comments in the python script or separate page on data cleaning</li>
-    <li>link to the final cleaned data set used for EDA</li>
-</ul>
-<p>
-Overall challenges in this preprocessing phase included handling outliers and ensuring consistency across different data sources.
-</p>
-    
-<h3>Exploratory Data Analysis</h3>
-
-<strong>Histograms of Key Numerical Variables</strong>
-<p>
-We'll first calculate some basic statistics for key numerical variables to get a better sense of the distribution and measures of centrality.
-</p>
-<ul>    
-    <li>show histograms</li>
-    <li>show project_pt_1_b and outputs from there/li>
-    <li>CREATE AND SHOW DISTR. of CLUBS BY STATE</li>
-    <li>CREATE AND SHOW HISTOs from aABOVE by CITY</li>
-</ul>    
-
-
-<strong>Insights:</strong>
-<ul>    
-    <li>Median household income for owned homes shows a spread towards higher income ranges, indicating a higher economic bracket for homeowners in these areas.</li>
-    <li>Renters' median household income is more clustered towards the lower end, suggesting a different economic demographic compared to homeowners.</li>
-</ul> 
-
-<h2>Data Cleaning and Preparation</h2>
-<p>For this analysis, the initial data cleaning steps involved handling missing values in the <code>eqnx_with_census_data.csv</code> file. We began by filtering out non-US records, which were identified by missing values in the <code>State</code> column. This was necessary because the analysis focuses exclusively on US locations.</p>
-
-<p>We then addressed missing values in numeric columns using a median imputation strategy:</p>
-<ul>
-    <li>If a <code>Location</code> has 5 or more sites, the median of that specific location was used to fill the missing values.</li>
-    <li>If a <code>Location</code> has fewer than 5 sites, the median of the entire column was used.</li>
-</ul>
-
-<p>After these steps, the dataset was cleaned and ready for further analysis, with non-numeric NaNs preserved for potential categorical analysis.</p>
-
-
-    <h2>Introduction & Objective</h2>
-<p>The purpose of this analysis is to examine demographic, economic, and housing characteristics of current Equinox club locations. By understanding the patterns that these locations share, we can provide insights that could inform future site selection decisions for Equinox.</p>
-<p>Despite the absence of internal usage data, this analysis utilizes external data sources to offer a preliminary phase of investigation. The long-term goal is to establish a data-driven approach that could evolve into a predictive model for identifying optimal new locations for Equinox.</p>
-
-<h2>Descriptive Analysis & Visualizations</h2>
-<p>We began our analysis by examining the distribution of key demographic variables at Equinox locations and comparing them to state and national averages.</p>
-
-<h3>1. Median Income of Families by State (Equinox Locations)</h3>
-<p>The boxplot below illustrates the distribution of median family incomes across different states where Equinox clubs are located. This helps to identify whether Equinox locations are predominantly in wealthier areas compared to the state averages.</p>
-<img src="boxplot_median_income.png" alt="Median Income of Families by State (Equinox Locations)">
-
-<h3>2. Distribution of Median Age at Equinox Locations</h3>
-<p>The histogram below shows the distribution of median ages at Equinox locations. Understanding the age distribution helps in identifying whether Equinox clubs are more common in areas with younger populations.</p>
-<img src="histogram_median_age.png" alt="Distribution of Median Age at Equinox Locations">
-
-<h3>3. Income Distribution: Equinox Locations vs National Average</h3>
-<p>The following histogram compares the income distribution at Equinox locations to the national average. This comparison is crucial in determining if Equinox clubs are situated in areas with significantly higher income levels than the general population.</p>
-<img src="histogram_income_comparison.png" alt="Income Distribution: Equinox Locations vs National Average">
-
-<h3>Key Insights</h3>
-<ul>
-    <li>Equinox locations tend to be situated in areas with higher median incomes compared to the national average. This is visually represented by the concentration of locations in higher income brackets and the comparison to the national median.</li>
-    <li>Demographic factors such as age and family income levels show distinct patterns, suggesting that Equinox clubs may thrive in younger, wealthier neighborhoods.</li>
-    <li>The correlation heatmap provides a detailed look at how various factors are related to each other and the presence of Equinox locations, laying the groundwork for deeper analysis.</li>
-</ul>
-
-<h3>Correlation Analysis: Key Factors</h3>
-<p>We performed a correlation analysis to identify the strongest relationships between demographic and economic factors at Equinox locations. The following insights were derived:</p>
-<ul>
-    <li><strong>Household Costs and Family Income:</strong> Strong correlations were observed between household costs (both for renters and homeowners) and family income, indicating that Equinox locations are typically found in wealthier areas.</li>
-    <li><strong>Population and Family Size:</strong> The population count is strongly correlated with the number of families and individuals, suggesting that Equinox locations are in denser, family-oriented areas.</li>
-    <li><strong>Household Occupancy and Income:</strong> Higher household occupancy rates are associated with higher incomes, further supporting the idea that Equinox locations are in affluent neighborhoods.</li>
-</ul>
-
-<h3>Hypothesis Testing: Median Income</h3>
-<p>To determine if the median income at Equinox locations is significantly different from the national median income, we conducted a Mann-Whitney U test. This non-parametric test was chosen due to the lack of variance in the national income data, which made a t-test unreliable.</p>
-<p><strong>Mann-Whitney U Test Results:</strong></p>
-<ul>
-    <li><strong>U-Statistic:</strong> 99.0</li>
-    <li><strong>P-Value:</strong> 0.1547</li>
-</ul>
-<p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income. This suggests that while Equinox locations are in wealthier areas, the difference is not statistically significant at the 5% level.</p>
-
-<h3>Gender-Based Income Analysis</h3>
-<p>We explored the income differences between males and females at Equinox locations compared to the state averages. The following boxplots visualize these differences:</p>
-
-<h4>1. Male Median Income: Equinox Locations vs. State Averages</h4>
-<img src="boxplot_male_income.png" alt="Male Median Income: Equinox Locations vs. State Averages">
-
-<h4>2. Female Median Income: Equinox Locations vs. State Averages</h4>
-<img src="boxplot_female_income.png" alt="Female Median Income: Equinox Locations vs. State Averages">
-
-<h4>Key Insights</h4>
-<ul>
-    <li><strong>Statistically Significant Differences:</strong> Both males and females at Equinox locations have significantly higher median incomes compared to the state averages, as shown by the Mann-Whitney U test results.</li>
-    <li>The income levels at Equinox locations underscore the club's presence in affluent areas, with both genders earning more compared to state averages.</li>
-</ul>
-
-<h4>Hypothesis Testing Results</h4>
-<p>We conducted Mann-Whitney U tests to assess the significance of the income differences:</p>
-<ul>
-    <li><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li>
-    <li><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: \(6.60 \times 10^{-8}\)</li>
-</ul>
-<p>Both tests confirm that the income differences between Equinox locations and state averages are statistically significant for both males and females.</p>
-
-<h2>Conclusion & Future Directions</h2>
-<p>This analysis provided valuable insights into the demographic and economic characteristics of Equinox locations compared to state and national averages. The key findings are summarized below:</p>
-
-<h4>1. Income and Demographic Insights</h4>
-<ul>
-    <li>Equinox locations are predominantly situated in affluent areas, with median incomes significantly higher than both state and national averages.</li>
-    <li>Both male and female income levels at Equinox locations are higher than state averages, and this difference is statistically significant.</li>
-    <li>The analysis also revealed correlations between household costs, family income, and population density, further highlighting the wealth and density of areas where Equinox thrives.</li>
-</ul>
-
-<h4>2. Gender-Based Differences</h4>
-<ul>
-    <li>Both males and females at Equinox locations tend to have higher incomes compared to their counterparts at the state level.</li>
-    <li>The significant differences in median income between Equinox locations and state averages for both genders underscore the club’s presence in wealthier areas.</li>
-</ul>
-
-<h4>Future Directions</h4>
-<p>While this analysis lays a strong foundation for understanding the characteristics of successful Equinox locations, further analysis could focus on predictive modeling to identify potential new locations. Future work could also explore additional factors such as education levels, commuting patterns, and other socioeconomic indicators that might influence the success of a new club location.</p>
-<p>Overall, this project demonstrates a methodical approach to data analysis, with meaningful insights that can inform strategic business decisions. It showcases the ability to conduct thorough exploratory data analysis, perform hypothesis testing, and effectively communicate findings, making it a valuable contribution to the decision-making process.</p>
-
-<h2>Introduction & Objective</h2>
-<p>The purpose of this analysis is to examine demographic, economic, and housing characteristics of current Equinox club locations. By understanding the patterns that these locations share, we can provide insights that could inform future site selection decisions for Equinox.</p>
-<p>Despite the absence of internal usage data, this analysis utilizes external data sources to offer a preliminary phase of investigation. The long-term goal is to establish a data-driven approach that could evolve into a predictive model for identifying optimal new locations for Equinox.</p>
-
-<h2>Descriptive Analysis & Visualizations</h2>
-<p>We began our analysis by examining the distribution of key demographic variables at Equinox locations and comparing them to state and national averages.</p>
-
-<h3>1. Median Income of Families by State (Equinox Locations)</h3>
-<p>The boxplot below illustrates the distribution of median family incomes across different states where Equinox clubs are located. This visualization helps identify whether Equinox locations are predominantly in wealthier areas compared to the state averages.</p>
-<img src="boxplot_median_income.png" alt="Median Income of Families by State (Equinox Locations)">
-
-<h3>2. Distribution of Median Age at Equinox Locations</h3>
-<p>The histogram below shows the distribution of median ages at Equinox locations. Understanding the age distribution is important in identifying whether Equinox clubs are more common in areas with younger populations.</p>
-<img src="histogram_median_age.png" alt="Distribution of Median Age at Equinox Locations">
-
-<h3>3. Income Distribution: Equinox Locations vs National Average</h3>
-<p>The following histogram compares the income distribution at Equinox locations to the national average. The gray dashed line represents the national median income. This comparison is crucial in determining whether Equinox clubs are situated in areas with significantly higher income levels than the general population.</p>
-<img src="histogram_income_comparison.png" alt="Income Distribution: Equinox Locations vs National Average">
-
-<h3>Key Insights</h3>
-<ul>
-    <li>Equinox locations tend to be situated in areas with higher median incomes compared to the national average. This is visually represented by the concentration of locations in higher income brackets and the comparison to the national median.</li>
-    <li>Demographic factors such as age and family income levels show distinct patterns, suggesting that Equinox clubs may thrive in younger, wealthier neighborhoods.</li>
-    <li>The correlation heatmap provides a detailed look at how various factors are related to each other and the presence of Equinox locations, laying the groundwork for deeper analysis.</li>
-</ul>
-
-<h3>Hypothesis Testing: Median Income</h3>
-<p>To determine if the median income at Equinox locations is significantly different from the national median income, we initially conducted an independent t-test. The goal was to assess whether the observed differences in income were statistically significant.</p>
-<p>However, the t-test revealed issues due to the lack of variance in the national median income data, leading to unreliable results. Specifically, the national income data showed very little variation, which made the t-test unsuitable for this analysis.</p>
-
-<p>To address this, we chose to use the Mann-Whitney U test, a non-parametric alternative that does not assume a normal distribution and is better suited for comparing medians when distributions differ significantly. This choice was made to ensure the robustness of the statistical analysis, providing a more accurate assessment of the differences in median income.</p>
-
-<p><strong>Mann-Whitney U Test Results:</strong></p>
-<ul>
-    <li><strong>U-Statistic:</strong> 99.0</li>
-    <li><strong>P-Value:</strong> 0.1547</li>
-</ul>
-<p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income. This suggests that while Equinox locations are in wealthier areas, the difference is not statistically significant at the 5% level.</p>
-
-<h3>Gender-Based Income Analysis</h3>
-<p>We explored the income differences between males and females at Equinox locations compared to the state averages. The following boxplots visualize these differences:</p>
-
-<h4>1. Male Median Income: Equinox Locations vs. State Averages</h4>
-<img src="boxplot_male_income.png" alt="Male Median Income: Equinox Locations vs. State Averages">
-
-<h4>2. Female Median Income: Equinox Locations vs. State Averages</h4>
-<img src="boxplot_female_income.png" alt="Female Median Income: Equinox Locations vs. State Averages">
-
-<h4>Key Insights</h4>
-<ul>
-    <li><strong>Statistically Significant Differences:</strong> Both males and females at Equinox locations have significantly higher median incomes compared to the state averages, as shown by the Mann-Whitney U test results.</li>
-    <li>The income levels at Equinox locations underscore the club's presence in affluent areas, with both genders earning more compared to state averages.</li>
-</ul>
-
-<h4>Hypothesis Testing Results</h4>
-<p>We conducted Mann-Whitney U tests to assess the significance of the income differences:</p>
-<ul>
-    <li><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li>
-    <li><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: \(6.60 \times 10^{-8}\)</li>
-</ul>
-<p>Both tests confirm that the income differences between Equinox locations and state averages are statistically significant for both males and females.</p>
-
-<h2>Conclusion & Future Directions</h2>
-<p>This analysis provided valuable insights into the demographic and economic characteristics of Equinox locations compared to state and national averages. The key findings are summarized below:</p>
-
-<h4>1. Income and Demographic Insights</h4>
-<ul>
-    <li>Equinox locations are predominantly situated in affluent areas, with median incomes significantly higher than both state and national averages.</li>
-    <li>Both male and female income levels at Equinox locations are higher than state averages, and this difference is statistically significant.</li>
-    <li>The analysis also revealed correlations between household costs, family income, and population density, further highlighting the wealth and density of areas where Equinox thrives.</li>
-</ul>
-
-<h4>2. Gender-Based Differences</h4>
-<ul>
-    <li>Both males and females at Equinox locations tend to have higher incomes compared to their counterparts at the state level.</li>
-    <li>The significant differences in median income between Equinox locations and state averages for both genders underscore the club’s presence in wealthier areas.</li>
-</ul>
-
-<h4>Future Directions</h4>
-<p>While this analysis lays a strong foundation for understanding the characteristics of successful Equinox locations, further analysis could focus on predictive modeling to identify potential new locations. Future work could also explore additional factors such as education levels, commuting patterns, and other socioeconomic indicators that might influence the success of a new club location.</p>
-<p>Overall, this project demonstrates a methodical approach to data analysis, with meaningful insights that can inform strategic business decisions. It showcases the ability to conduct thorough exploratory data analysis, perform hypothesis testing, and effectively communicate findings, making it a valuable contribution to the decision-making process.</p>
-
 </body>
 </html>
