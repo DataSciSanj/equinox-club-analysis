@@ -47,19 +47,17 @@
             <h3>Hypothesis Testing: Median Income</h3>
             <p>To determine if the median income at Equinox locations is significantly different from the national median income, we conducted a Mann-Whitney U test. This non-parametric test was chosen due to the lack of variance in the national income data, which made a t-test unreliable.</p>
             <p><strong>Mann-Whitney U Test Results:</strong></p>
-            <ul><code>
-                <li>U-Statistic: 99.0</li>
-                <li>P-Value:</code> 0.1547</li>
-            </ul></code>
+            <ul>
+                <li><code>U-Statistic: 99.0</li></code>
+                <li><code>P-Value:</code> 0.1547</li></code>
+            </ul>
             <p>The p-value indicates that there is no statistically significant difference between the median income at Equinox locations and the national median income. This suggests that while Equinox locations are in wealthier areas, the difference is not statistically significant at the 5% level.</p>
         </section>
         <section class="gender-analysis">
             <h3>Gender-Based Income Analysis</h3>
-            <p>We explored the income differences between males and females at Equinox locations compared to the state averages. The following boxplots visualize these differences:</p>
-            <h4>1. Male Median Income: Equinox Locations vs. State Averages</h4>
-            <img src="boxplot_male_income.png" alt="Male Median Income: Equinox Locations vs. State Averages">
-            <h4>2. Female Median Income: Equinox Locations vs. State Averages</h4>
-            <img src="boxplot_female_income.png" alt="Female Median Income: Equinox Locations vs. State Averages">
+            <p>We explored the income differences between males and females at Equinox locations compared to the state averages.</p>
+            <h4>1. Male and Female Median Income: Equinox Locations vs. State Averages</h4>
+            <img src="https://github.com/DataSciSanj/equinox-club-analysis/blob/main/docs/male_female_med_income_dist_eqnx_vs_state.png" alt="Male Femail Median Income Equinox Locations vs. State Averages">
             <h4>Key Insights</h4>
             <ul>
                 <li><strong>Statistically Significant Differences:</strong> Both males and females at Equinox locations have significantly higher median incomes compared to the state averages, as shown by the Mann-Whitney U test results.</li>
@@ -68,8 +66,8 @@
             <h4>Hypothesis Testing Results</h4>
             <p>We conducted Mann-Whitney U tests to assess the significance of the income differences:</p>
             <ul>
-                <li><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li>
-                <li><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: \(6.60 \times 10^{-8}\)</li>
+                <li><code><strong>Male Income:</strong> U-Statistic: 661.0, P-Value: \(1.28 \times 10^{-6}\)</li></code>
+                <li><code><strong>Female Income:</strong> U-Statistic: 696.0, P-Value: \(6.60 \times 10^{-8}\)</li></code>
             </ul>
             <p>Both tests confirm that the income differences between Equinox locations and state averages are statistically significant for both males and females.</p>
         </section>
