@@ -21,7 +21,7 @@
             <img src="https://github.com/DataSciSanj/equinox-club-analysis/blob/main/docs/boxplot_median_income.png" alt="Median Income of Families by State (Equinox Locations)">
             <h3>2. Distribution of Median Age at Equinox Locations</h3>
             <p>The histogram below shows the distribution of median ages at Equinox locations. Understanding the age distribution helps in identifying whether Equinox clubs are more common in areas with younger populations.</p>
-            <img src="histogram_median_age.png" alt="Distribution of Median Age at Equinox Locations">
+            ![Distribution of Median Age at Equinox Locations](docs/dist_median_age_eqnx_locations.png)
             <h3>3. Income Distribution: Equinox Locations vs National Average</h3>
             <p>The following histogram compares the income distribution at Equinox locations to the national average. This comparison is crucial in determining if Equinox clubs are situated in areas with significantly higher income levels than the general population.</p>
             <img src="histogram_income_comparison.png" alt="Income Distribution: Equinox Locations vs National Average">
